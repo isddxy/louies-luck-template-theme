@@ -1,7 +1,7 @@
 {
-    "name": "OptimizedHTML-5.1-styl",
+    "name": "louies-luck-template-theme",
     "version": "5.0.0",
-    "description": "OptimizedHTML 5.1 - Lightweight Gulp Starter with styl",
+    "description": "Louie's Luck - Straight bourbon whiskey | Buy or free taste",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
