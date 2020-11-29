@@ -3,12 +3,17 @@
 
 // USER VARIABLES SECTION
 
-accent = orange // Accent Color
+accent = $color.accent1 // Accent Color
 fontsize = 16px // Body Font Size
-textcolor = #333 // Text Color
+textcolor = $color.white // Text Color
 lineheight = 1.65 // Document Line Height
-userfont = Roboto, sans-serif // User Font Family
+userfont = Din-Pro, sans-serif // User Font Family
 systemfont = -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+
+
+em(fontSize, baseFontSize = fontsize)
+	(fontSize / baseFontSize)em
 
 // IMPORT SECTION
 
@@ -26,10 +31,14 @@ font(fname, fstyle, fweight, furl)
 		// font-display swap // Uncomment to initially display system fonts
 
 
-font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+font('Bodoni2', normal, 400, '../fonts/bodoni72c-webfont.woff2')
+font('Bodoni2', normal, 700, '../fonts/bodoni72c-bold-webfont.woff2')
+
+font('Din-Pro', normal, 400, '../fonts/din-pro-light.woff2')
+font('Din-Pro', normal, 500, '../fonts/din-pro-medium.woff2')
+font('Din-Pro', normal, 700, '../fonts/din-pro-bold.woff2')
+font('Din-Pro2', normal, 400, '../fonts/din-pro.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -55,3 +64,4 @@ body
 	min-width 320px
 	position relative
 	overflow-x hidden
+	background $color.dark2

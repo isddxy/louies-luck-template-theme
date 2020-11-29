@@ -1,0 +1,53 @@
+.story
+    z-index -10
+    width 100%
+    background-position bottom center
+    background-size cover
+    @media (max-width size-tablet)
+        margin-top 10vh
+        background-position top center
+    @media (max-width size-mobile)
+        margin-top 30vh
+        background-position top center
+    .content
+        padding-top 500px
+        padding-bottom 350px
+        height 100%
+        display grid
+        align-content center
+        grid-template-columns repeat(12, 1fr)
+        grid-template-areas "text text text text text 0 0 0 0 0 0 0"
+        @media (max-width size-notebook)
+            padding-top 200px
+            padding-bottom 200px
+        @media (max-width size-tablet)
+            padding-top 125px
+            padding-bottom 125px
+        @media (max-width size-mobile)
+            grid-template-columns 1fr
+            grid-template-areas "text"
+            padding-top 20vh
+            padding-bottom 60vh
+        .text
+            grid-area text
+            h2
+                font-family titlefont
+                text-transform uppercase
+                font-size em(70px)
+                font-weight 500
+                color $color.dark2
+                letter-spacing em(1.2)
+                @media (max-width size-notebook)
+                    font-size em(50px)
+                @media (max-width size-tablet)
+                    font-size em(50px)
+            p
+                color $color.dark2
+                opacity .65
+                font-family Din-Pro2
+                font-size em(26px)
+                font-weight 500
+                @media (max-width size-notebook)
+                    font-size em(18px)
+                @media (max-width size-tablet)
+                    font-size em(15px)
