@@ -1,0 +1,71 @@
+.recipes
+    padding-top 100px
+    padding-bottom 100px
+    background-position top center
+    background-size cover
+    position relative
+    .container
+        display grid
+        grid-gap 64px
+        .title
+            h2
+                font-size em(80)
+                margin 0
+                padding 0
+                text-align center
+                font-family titlefont
+                line-height 1.2em
+            h5
+                color $color.accent1
+                font-size em(35)
+                font-weight 500
+                text-align center
+                margin 0
+                padding 0
+                line-height 1.2em
+        .items
+            display grid
+            grid-template-columns 1fr 1fr 1fr
+            grid-gap 100px
+            @media ( max-width size-tablet)
+                grid-template-columns 1fr 1fr
+            @media ( max-width size-mobile)
+                grid-template-columns 1fr
+            .item
+                align-items start
+                &:last-child
+                    @media (max-width size-tablet)
+                        display none
+                &:nth-last-of-type(-n+2)
+                    @media (max-width size-mobile)
+                        display none
+                .recipe 
+                    width 100%
+                .name
+                    margin em(20) 0
+                    h3
+                        margin 0
+                        padding 0
+                        font-size em(31)
+                        font-weight 500
+                        @media (max-width size-notebook)
+                            font-size em(28)
+                        @media (max-width size-tablet)
+                            font-size em(26)
+                .ing
+                    align-self start
+                    .line
+                        display grid
+                        grid-template-columns auto 1fr
+                        grid-gap em(20px)
+                        margin-bottom em(13)
+                        align-items center
+                        span
+                            opacity .65
+                            font-size em(20)
+                            line-height 1.1em
+        .btn
+            justify-self center
+            width 30%
+            @media (max-width size-mobile)
+                width 60%
