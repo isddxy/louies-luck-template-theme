@@ -54,7 +54,7 @@
                 background-image: url(<?php bloginfo('template_directory'); ?>/images/dest/firstscreen-bg-tablet.jpg);
             }
             .story {
-                background-image: url(<?php bloginfo('template_directory'); ?>/imagesimages/dest/story-bg-notebook.jpg);
+                background-image: url(<?php bloginfo('template_directory'); ?>/images/dest/story-bg-notebook.jpg);
             }
             .taste {
                 background-image: url(<?php bloginfo('template_directory'); ?>/images/dest/taste-bg-tablet.jpg);
@@ -343,9 +343,9 @@
                     </div>
                 </div>
                 <div class="age">
-                    <img src="images/src/footer-line.svg" />
+                    <img src="<?php bloginfo('template_directory'); ?>/images/src/footer-line.svg" />
                     <p>You have to be 21 years of age and older to legally drink alcohol in the United States.</p>
-                    <img src="images/src/footer-line.svg" />
+                    <img src="<?php bloginfo('template_directory'); ?>/images/src/footer-line.svg" />
                 </div>
                 <div class="contact">
                     <p>Distribution - <span>distribution@mjdistillers.com</span></p>
