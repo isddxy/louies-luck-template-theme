@@ -1,0 +1,298 @@
+.first-screen
+    height 100vh
+    @media ( max-width $size-tablet ) {  
+        height auto
+    }
+    header
+        margin-top em(46)
+        display grid
+        grid-template-columns 1fr auto 1fr
+        align-items center
+        grid-gap em(196)
+        @media (max-width $size-notebook) {
+            grid-gap em(90)
+            margin-top em(26)
+        }
+        @media (max-width $size-tablet) {
+            grid-gap em(54)
+            margin-top em(26)
+        }
+        @media ( max-width $size-mobile ) {
+            grid-template-columns 1fr 
+            grid-gap em(0)
+        }
+        .logo
+            margin-top em(-20)
+            transition transform 300ms ease-in-out
+            margin-right em(-24)
+            @media ( max-width $size-notebook ) {
+                margin-top em(0)
+                height em(80px)
+            }
+            @media ( max-width $size-tablet ) {
+                height 72px
+            }
+            &:hover
+                transform scale(1.1)
+        .nav
+            @media ( max-width $size-mobile ) {
+                display none
+            }
+            ul
+                margin 0
+                padding 0
+                list-style none
+                display grid
+                grid-template-columns auto auto auto
+                grid-gap em(83)
+                @media ( max-width $size-notebook ) {
+                    grid-gap em(75)
+                }
+                @media (max-width $size-tablet) {
+                    grid-gap em(55)
+                }
+                li
+                    margin 0
+                    padding 0
+                    display inline-block
+                    letter-spacing em(1)
+                    &.icons
+                        outline 0px solid red
+                        &:hover
+                            a
+                                color $color.dark
+                        .social-icons
+                            display grid
+                            grid-template-columns auto auto
+                            justify-content end
+                            grid-gap em(40)
+                            @media (max-width $size-tablet) {
+                                grid-gap em(20)
+                            }
+                            .icon
+                                color $color.dark
+                                outline 0px solid green
+                                svg
+                                    height em(20px)
+                                    width em(20px)
+                                &:hover
+                                    color $color.accent1 !important
+                    &:hover
+                        a
+                            color $color.accent1
+                    a
+                        font-size em(19px)
+                        font-weight 700
+                        text-transform uppercase
+                        color $color.dark
+                        text-decoration none
+                        transition color 300ms ease-in-out
+                        @media (max-width $size-tablet) {
+                            font-size em(14px)
+                        }
+    .content
+        margin-top em(110)
+        display grid
+        grid-template-columns repeat(12, 1fr)
+        grid-template-areas "left left left left center center center center right right right right"
+        grid-gap em(24px)
+        @media ( max-width $size-notebook ) {
+            margin-top em(80)
+        }
+        @media ( max-width $size-mobile ) {
+            grid-template-columns repeat(4, 1fr)
+            grid-template-areas "left left left center" "right right right center"
+        }
+        .left
+            grid-area left
+            img
+                @media ( max-width $size-notebook ) {
+                    width 100%
+                }
+                @media ( max-width $size-mobile ) {
+                    display none
+                }
+            h2
+                font-family Bodoni2, serif
+                font-size em(60)
+                font-weight normal
+                line-height em(14)
+                letter-spacing em(0.8)
+                padding 0
+                margin 0
+                margin-top em(16)
+                @media ( max-width $size-notebook ) {
+                    font-size em(48)
+                    margin-top em(9)
+                }
+                @media ( max-width $size-tablet ) {
+                    font-size em(38)
+                    margin-top em(9)
+                }
+                @media ( max-width $size-mobile ) {
+                    font-size em(43)
+                    margin-top em(0)
+                    font-weight bold
+                }
+            h3
+                color $color.accent1
+                font-weight normal
+                font-size em(28)
+                letter-spacing em(0.8)
+                padding 0
+                margin 0
+                margin-top em(16)
+                @media ( max-width $size-notebook ) {
+                    font-size em(24)
+                    margin-top em(9)
+                }
+                @media ( max-width $size-tablet ) {
+                    font-size em(20)
+                    margin-top em(8)
+                }
+            p
+                padding 0
+                margin 0
+                margin-top em(10)
+                font-size em(25)
+                letter-spacing em(0.7)
+                opacity .35
+                width 70%
+                line-height em(22)
+                @media ( max-width $size-notebook ) {
+                    font-size em(20)
+                    margin-top em(4)
+                }
+                @media ( max-width $size-tablet ) {
+                    font-size em(18)
+                    margin-top em(4)
+                }
+                @media ( max-width $size-mobile ) {
+                    position absolute
+                    top 0
+                    left 0
+                    width 100%
+                    padding em(24)
+                    margin-top 100vh
+                    color $color.dark
+                    opacity 1
+                    background linear-gradient(89.65deg, #EFF2F4 2.96%, rgba(239, 242, 244, 0) 99.73%)
+                }
+        .center
+            grid-area center
+            position absolute
+            left 0
+            top 0
+            width 100%
+            display grid
+            justify-items center
+            z-index -1
+            @media ( max-width $size-mobile ) {
+                right 0
+                overflow hidden
+            }
+            img
+                height 150vh
+                margin-top em(40)
+                @media ( max-width $size-notebook ) {
+                    height 150vh
+                }
+                @media (max-width $size-tablet) {
+                    max-height 100vh
+                    height auto
+                    max-width 60vw
+                }
+                @media ( max-width $size-mobile ) {
+                    max-width none
+                    //margin-left em(50)
+                    margin-left 17vw
+                }
+                
+        .right
+            display grid
+            grid-gap em(65)
+            grid-area right
+            @media ( max-width $size-notebook ) {
+                grid-gap em(45)
+            }
+            .tasting
+                h2
+                    font-family Bodoni2, serif
+                    font-size em(45)
+                    font-weight normal
+                    line-height em(14)
+                    letter-spacing em(0.8)
+                    padding 0
+                    margin 0
+                    @media ( max-width $size-notebook ) {
+                        font-size em(36)
+                    }
+                ul
+                    padding 0 0 0 em(25)
+                    margin em(15) 0 0 0
+                    opacity 0.65
+                    li
+                        color $color.dark
+                        font-size em(25)
+                        margin 0
+                        padding 0
+                        @media ( max-width $size-notebook ) {
+                            font-size em(20)
+                        }
+                        @media ( max-width $size-tablet ) {
+                            font-size em(18)
+                        }
+            .price-info
+                display grid
+                grid-template-columns auto 1fr
+                align-content center
+                @media ( max-width $size-mobile ) {
+                    max-width 78%
+                }
+                @media ( max-width $size-mobile ) {
+                    grid-template-columns 1fr
+                    width 100%
+                    margin-bottom em(-20)
+                }
+                .price
+                    font-weight bold
+                    font-size em(120)
+                    line-height em(14)
+                    padding 0
+                    margin 0
+                    @media ( max-width $size-notebook ) {
+                        font-size em(100)
+                    }
+                    @media ( max-width $size-tablet ) {
+                        font-size em(70)
+                    }
+                .info
+                    display grid
+                    justify-self end
+                    grid-template-columns 1fr
+                    font-size em(28)
+                    @media ( max-width $size-notebook ) {
+                        font-size em(23)
+                    }
+                    @media ( max-width $size-tablet ) {
+                        font-size em(18)
+                    }
+                    @media ( max-width $size-mobile ) {
+                        justify-self start
+                        grid-template-columns 1fr 1fr
+                        margin-top em(4)
+                        width 100%
+                    }
+                    .size
+                        @media ( max-width $size-mobile ) {
+                            justify-self end
+                        }
+            .btns
+                display grid
+                grid-gap em(30)
+                @media ( max-width $size-tablet ) {
+                    grid-gap em(15)
+                }
+                @media ( max-width $size-mobile ) {
+                    max-width 78%
+                }

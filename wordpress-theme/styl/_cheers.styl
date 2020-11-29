@@ -1,0 +1,102 @@
+.cheers
+    background linear-gradient(271.53deg, #EDEFF0 45.99%, rgba(237, 239, 240, 0) 75.85%), linear-gradient(180deg, #E9E9E9 0%, #EFF0F1 100%), #C4C4C4;
+    position relative
+    .bg
+        position absolute
+        z-index 0
+        right 0
+        display block
+        height 100%
+        width 50vw
+        background-size cover
+        background-repeat none
+        @media ( max-width $size-mobile ) {
+            width 80vw
+        }
+    .container
+        padding-top em(150)
+        padding-bottom em(150)
+        display grid
+        grid-template-columns auto 2fr 1fr
+        grid-gap em(100px)
+        @media ( max-width $size-notebook ) {
+            padding-top em(120)
+            padding-bottom em(120)
+            max-height 700px
+        }
+        @media ( max-width $size-tablet ) {
+            padding-top em(60)
+            padding-bottom em(60)
+            grid-gap em(30)
+            height 50vh
+        }
+        @media ( max-width $size-mobile ) {
+            grid-template-columns 1fr
+            height 50vh
+            //min-height 400px
+        }
+        .line
+            height 100%
+            img
+                height 100%
+            @media ( max-width $size-notebook ) {
+                height 80%
+            }
+            @media ( max-width $size-tablet ) {
+                height 50%
+            }
+            @media ( max-width $size-mobile ) {
+                display none
+            }
+        .content
+            z-index 2
+            display grid
+            grid-gap em(20)
+            @media ( max-width $size-notebook ) {
+                height 80%
+            }
+            @media ( max-width $size-tablet ) {
+                height 50%
+            }
+            h2
+                font-family Bodoni2, serif
+                font-size em(130)
+                line-height .85em
+                font-weight bold
+                @media ( max-width $size-tablet ) {
+                    font-size em(60)
+                    margin 0
+                    padding 0
+                }
+                @media ( max-width $size-mobile ) {
+                    font-size em(38)
+                    width 60%
+                }
+            .text
+                display grid
+                grid-gap em(13px)
+                width 85%
+                @media ( max-width $size-mobile ) {
+                    width 42%
+                }
+                p
+                    opacity .7
+                    color $color.dark
+                    font-size em(24)
+                    line-height 1.44em
+                    margin 0
+                    padding 0
+                    @media ( max-width $size-notebook ) {
+                        font-size em(22)
+                    }
+                    @media ( max-width $size-tablet ) {
+                        align-self end
+                        font-size em(18)
+                    }
+                    &:first-child
+                        @media ( max-width $size-mobile ) {
+                            display none
+                        }
+            .btn
+                background $color.white
+                width 65%

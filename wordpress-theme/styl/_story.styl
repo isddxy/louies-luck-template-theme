@@ -1,0 +1,130 @@
+.story
+    margin-top 20vh
+    @media ( max-width $size-tablet ) {  
+        margin-top 30vh
+    }
+    @media ( max-width $size-mobile ) {  
+        margin-top 40vh
+    }
+    .bg
+        z-index -3
+        position absolute
+        right 0
+        display block
+        height 100vh
+        width 50vw
+        background-size cover
+        background-repeat none
+        @media ( max-width $size-notebook ) {
+            width 70vw
+        }
+        @media ( max-width $size-tablet ) {  
+            height 70vh
+            width 80vw
+            margin-top em(36px)
+        }
+        @media ( max-width $size-mobile ) {
+            margin-top 40vh
+            width 100vw
+            left 0
+        }
+    .content
+        display grid
+        grid-template-columns 1fr 1fr 1fr
+        grid-template-areas "story1 0 0" "image1 story2 -" "image2 image2 story3"
+        grid-column-gap em(24px)
+        grid-row-gap em(66px)
+        align-items start
+        margin-bottom (90px)
+        @media ( max-width $size-tablet ) {
+            grid-template-areas "story1 story2 0" "image1 story2 -" "image2 image2 story3"
+            margin-bottom (60px)
+        }
+        @media ( max-width $size-mobile ) {
+            grid-template-columns 1fr
+            grid-template-areas "story1" "image1" "story2" "image2" "story3"
+            margin-bottom (30px)
+            grid-row-gap em(26px)
+        }
+        .story
+            &1
+                grid-area story1
+                h2
+                    font-family Bodoni2, serif
+                    font-size em(40)
+                    font-weight bold
+                    line-height em(14)
+                    letter-spacing em(0.8)
+                    padding 0
+                    margin 0
+                    margin-bottom em(10)
+                    color $color.dark
+                    @media ( max-width $size-notebook ) {
+                        font-size em(48)
+                        margin-bottom em(9)
+                    }
+                    @media ( max-width $size-tablet ) {
+                        font-size em(38)
+                        margin-bottom em(9)
+                    }
+                    @media ( max-width $size-mobile ) {
+                        font-size em(44)
+                        margin-bottom em(12)
+                    }
+                p
+                    color $color.dark
+                    opacity .7
+                    font-size em(24)
+                    line-height 1.44em
+                    margin 0
+                    padding 0
+                    @media ( max-width $size-notebook ) {
+                        font-size em(22)
+                    }
+                    @media ( max-width $size-tablet ) {
+                        font-size em(18)
+                    }
+                &-image
+                    width 85%
+                    grid-area image1
+                    @media ( max-width $size-mobile ) {
+                        width 100%
+                    }
+            &2
+                grid-area story2
+                opacity .7
+                color $color.dark
+                font-size em(24)
+                line-height 1.44em
+                margin 0
+                padding 0
+                @media ( max-width $size-notebook ) {
+                    font-size em(22)
+                }
+                @media ( max-width $size-tablet ) {
+                    align-self end
+                    font-size em(18)
+                }
+                &-image
+                    width 90%
+                    grid-area image2
+                    @media ( max-width $size-notebook ) {
+                        width 93%
+                    }
+                    @media ( max-width $size-mobile ) {
+                        width 100%
+                    }
+            &3
+                grid-area story3
+                opacity .7
+                color $color.dark
+                font-size em(24)
+                line-height 1.44em
+                margin 0
+                padding 0
+                @media ( max-width $size-notebook ) {
+                    font-size em(22)
+                }
+                @media ( max-width $size-tablet ) {
+                    font-size em(18)
+                }

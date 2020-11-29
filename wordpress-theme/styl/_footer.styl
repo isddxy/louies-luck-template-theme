@@ -1,0 +1,160 @@
+footer
+    background ($color.dark)
+    padding em(60) 0
+    @media ( max-width $size-mobile ) {
+        padding em(24) 0
+    }
+    header
+        display grid
+        grid-template-columns 1fr auto 1fr
+        align-items center
+        grid-gap em(196)
+        @media (max-width $size-notebook) {
+            grid-gap em(90)
+        }
+        @media (max-width $size-tablet) {
+            grid-gap em(54)
+        }
+        @media ( max-width $size-mobile ) {
+            grid-template-columns 1fr 
+            grid-gap em(0)
+            justify-items center
+        }
+        .logo
+            margin-top em(-20)
+            transition transform 300ms ease-in-out
+            margin-right em(-24)
+            @media ( max-width $size-notebook ) {
+                margin-top em(0)
+                height em(80px)
+            }
+            @media ( max-width $size-tablet ) {
+                height 72px
+            }
+            &:hover
+                transform scale(1.1)
+        .nav
+            @media ( max-width $size-mobile ) {
+                display none
+            }
+            ul
+                margin 0
+                padding 0
+                list-style none
+                display grid
+                grid-template-columns auto auto auto
+                grid-gap em(83)
+                @media ( max-width $size-notebook ) {
+                    grid-gap em(75)
+                }
+                @media (max-width $size-tablet) {
+                    grid-gap em(55)
+                }
+                li
+                    margin 0
+                    padding 0
+                    display inline-block
+                    letter-spacing em(1)
+                    &.icons
+                        outline 0px solid red
+                        &:hover
+                            a
+                                color $color.white
+                        .social-icons
+                            display grid
+                            grid-template-columns auto auto
+                            justify-content end
+                            grid-gap em(40)
+                            @media (max-width $size-tablet) {
+                                grid-gap em(20)
+                            }
+                            .icon
+                                color $color.white
+                                outline 0px solid green
+                                svg
+                                    height em(20px)
+                                    width em(20px)
+                                &:hover
+                                    color $color.accent1 !important
+                    &:hover
+                        a
+                            color $color.accent1
+                    a
+                        font-size em(19px)
+                        font-weight 700
+                        text-transform uppercase
+                        color $color.white
+                        text-decoration none
+                        transition color 300ms ease-in-out
+                        @media (max-width $size-tablet) {
+                            font-size em(14px)
+                        }
+    .bottom
+        margin-top em(36)
+        color $color.white
+        display grid
+        align-items center
+        grid-template-columns 1fr 1fr 1fr
+        line-height 1.2em
+        @media (max-width $size-tablet) { 
+            grid-gap em(20)  
+            grid-template-columns auto 1fr auto
+        }
+        @media (max-width $size-mobile) { 
+            grid-template-columns 1fr
+            grid-template-areas "contact" "age" "copyright"
+        }
+        p
+            margin 0
+            padding 0
+            span
+                color $color.accent2
+        .copyright
+            opacity 1
+            @media (max-width $size-mobile) { 
+                grid-area copyright
+                display grid
+                grid-template-columns 1fr 1fr
+            }
+            .social-icons
+                display none
+                a
+                    color $color.white
+                @media (max-width $size-mobile) { 
+                    display grid
+                    justify-self end
+                    grid-template-columns 1fr 1fr
+                    grid-gap em(40)
+                }
+        .age
+            @media (max-width $size-mobile) { 
+                grid-area age
+            }
+            align-items center
+            display grid
+            grid-template-columns auto 1fr auto
+            grid-gap em(40)
+            @media (max-width $size-tablet) {
+                grid-gap em(20)
+            }
+            img
+                opacity .15
+                @media (max-width $size-tablet) {   
+                    display none
+                }
+            p
+                opacity .65
+                @media (max-width $size-tablet) {   
+                    font-size em(14)
+                }
+                @media (max-width $size-mobile) { 
+                    font-size em(15)
+                }
+        .contact
+            justify-self end
+            text-align right
+            @media (max-width $size-mobile) { 
+                grid-area contact
+                justify-self start
+                text-align left
+            }

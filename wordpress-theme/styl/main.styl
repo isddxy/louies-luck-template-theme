@@ -1,0 +1,73 @@
+@import _config
+
+.container
+    max-width 1440px
+    margin 0 auto
+    padding 0 28px
+    @media ( max-width $size-notebook ) {
+        max-width 1200px
+        padding 0 24px
+        font-size 14px
+    }
+    @media ( max-width $size-tablet ) {
+        max-width 768px
+        padding 0 24px
+    }
+    @media ( max-width $size-mobile ) {
+        width 100%
+        padding 0 20px
+    }
+
+
+@import _first_screen
+
+@import _story
+
+@import _cheers
+
+@import _recepts
+
+@import _footer
+
+
+
+.btn
+    display grid
+    width 100%
+    border 8px solid $color.dark
+    text-align center
+    font-size em(42)
+    color $color.dark
+    font-weight bold
+    text-transform uppercase !important
+    text-decoration none !important
+    align-items center
+    transition background-color 300ms ease-in-out
+    @media ( max-width $size-notebook ) {
+        font-size em(32)
+        border 6px solid $color.dark
+    }
+    @media ( max-width $size-tablet ) {
+        border 4px solid $color.dark
+        font-size em(20)
+    }
+.btn:hover
+    color $color.white
+    background-color $color.dark
+
+
+.btn-accent
+    text-transform uppercase
+    border 8px solid $color.accent2 !important
+    color $color.accent2 !important
+    @media ( max-width $size-notebook ) {
+        font-size em(32)
+        border 6px solid $color.accent2 !important
+    }
+    @media ( max-width $size-tablet ) {
+        border 4px solid $color.accent2 !important
+        font-size em(20)
+    }
+.btn-accent:hover
+    color $color.white !important
+    background-color $color.accent2 !important

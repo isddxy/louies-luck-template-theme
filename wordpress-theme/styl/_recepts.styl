@@ -1,0 +1,79 @@
+.recepts
+    margin em(50) 0
+    .title
+        text-align center
+        h3
+            font-size em(80)
+            line-height 1.2em
+            font-family Bodoni2, serif
+            font-weight bold
+            margin 0
+            padding 0
+            @media ( max-width $size-notebook ) {
+                font-size em(65)
+            }
+        h5
+            font-size em(35)
+            font-weight normal
+            margin 0
+            padding 0
+            @media ( max-width $size-notebook ) {
+                font-size em(30)
+            }
+    .items
+        display grid
+        grid-template-columns 1fr 1fr 1fr
+        margin em(64) 0
+        grid-gap em(100)
+        @media ( max-width $size-notebook ) {
+            grid-gap em(77)
+        }
+        @media ( max-width $size-tablet ) {
+            grid-template-columns 1fr 1fr
+        }
+        @media ( max-width $size-mobile ) {
+            grid-template-columns 1fr
+        }
+        .item
+            &:last-child
+                @media ( max-width $size-tablet ) {
+                    display none
+                }
+            &:nth-last-of-type(-n+2)
+                @media ( max-width $size-mobile ) {
+                    display none
+                }
+            .image
+                width 100%
+            .name
+                display grid
+                grid-template-columns auto 1fr
+                align-items center
+                grid-gap em(20)
+                h4
+                    font-family Bodoni2, serif
+                    font-size em(43)
+                    font-weight bold
+                    line-height em(40)
+                    margin 0
+                    padding 0
+                    margin-bottom (-5px)
+                    @media ( max-width $size-notebook ) {
+                        font-size em(34)
+                    }
+            .line
+                padding-left em(5px)
+                display grid
+                grid-template-columns auto 1fr
+                align-items center
+                grid-gap em(26)
+                margin-bottom 2px
+                span
+                    font-size em(22)
+                    opacity .65
+                    @media ( max-width $size-notebook ) {
+                        font-size em(19)
+                    }
+    .btn
+        width 30%
+        margin 0 auto
